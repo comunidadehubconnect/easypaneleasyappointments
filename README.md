@@ -36,25 +36,6 @@ Adicione codigo abaixo dentro do Schema
 {
   "services": [
     {
-      "type": "mysql",
-      "data": {
-        "projectName": "easyappointments-db",
-        "serviceName": "easyappointments-db",
-        "image": "mysql:latest"
-      }
-    }
-  ]
-}
-```
-
-Adicione codigo abaixo dentro do Schema com credenciais Mysql
-
-![image](https://github.com/comunidadehubconnect/easypanelwoofedcrm/assets/91642837/74b97f33-e5d2-495d-aaba-25bb8b433adf)
-
-```bash
-{
-  "services": [
-    {
       "type": "app",
       "data": {
         "projectName": "easyappointments",
