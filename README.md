@@ -66,17 +66,25 @@ Adicione codigo abaixo dentro do Schema com credenciais Mysql
         "domains": [
           {
             "host": "$(EASYPANEL_DOMAIN)",
-            "port": 3001
+            "port": 80
           }
         ],
-        "env":"BASE_URL=https://$(PRIMARY_DOMAIN) \nDEBUG_MODE=true \nMYSQL_HOST=mysql \nMYSQL_NAME=BANCODEDADOS \nMYSQL_USERNAME=USER \nMYSQL_PASSWORD=SENHA \nMYSQL_ROOT=SENHAROOT",
-        "mounts": [
+        "env":"BASE_URL=https://$(PRIMARY_DOMAIN) \nDEBUG_MODE=TRUE \nDB_HOST=mysql \nDB_NAME=easyappointments \nDB_USERNAME=root \nDB_PASSWORD=secret",
+         "mounts": [
           {
             "type": "volume",
             "name": "easyapointments_data",
             "mountPath": "/var/www/html"
           }
-        ]
+         ]
+      }
+    },
+    {
+      "type": "mysql",
+      "data": {
+        "projectName": "easyappointments-db",
+        "serviceName": "easyappointments-db",
+        "password": "70e05e5240972e6af71e"
       }
     }
   ]
